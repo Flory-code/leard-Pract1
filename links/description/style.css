@@ -32,10 +32,19 @@ header a{
     margin-top: 7px;
     margin-right: 20px;
 }
+
+.usr{
+    height: 50px;
+    width: 50px;
+    border: solid 1px;
+    border-radius: 5%;
+    color: white;
+    font-size: 30px;
+    margin-right: 10px;
+}
 .logo{
     margin-left: 20px;
 }
-
 
 .pp{
     margin-bottom: 80px;

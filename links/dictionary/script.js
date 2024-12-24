@@ -1,3 +1,12 @@
+const headerUsername = document.getElementById('header-username');
+const storedLogin = localStorage.getItem('userLogin');
+if (headerUsername) {
+    headerUsername.textContent = storedLogin ? `Привет, ${storedLogin}` : 'Гость';
+}
+
+
+
+
 const itemList = document.getElementById('itemList');
 const itemInput = document.getElementById('itemInput');
 const addButton = document.getElementById('addButton');

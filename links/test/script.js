@@ -1,3 +1,11 @@
+const headerUsername = document.getElementById('header-username');
+const storedLogin = localStorage.getItem('userLogin');
+if (headerUsername) {
+    headerUsername.textContent = storedLogin ? `Привет, ${storedLogin}` : 'Гость';
+}
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const profileLogin = document.getElementById('profile-login');
     const profileTestResult = document.getElementById('profile-test-result');
