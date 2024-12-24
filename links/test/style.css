@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    background-color: black;
+}
+
+header a {
+    margin: 0 20px 0 0;
+    font-size: 25px;
+}
+
+.header-all {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+.head-links {
+    justify-content: center;
+}
+.authlogo {
+    margin-top: 7px;
+    margin-right: 20px;
+}
+.logo {
+    margin-left: 20px;
+}
+.content {
+    min-height: 800px; /* Установите минимальную высоту */
+    background-color: rgb(165, 42, 42);
+}
+.container {
+    width: 900px;
+    margin: auto;
+    background: rgb(196, 196, 196);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    min-height: 600px; /* Установите минимальную высоту */
+}
+
+.slide {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20px;
+    padding: 20px;
+    color: rgb(0, 0, 0); 
+}
+
+button {
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px; 
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.con2 {
+    display: flex;
+    gap: 10px;
+}
+
+input[type=text] {
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid #666;
+    margin-bottom: 10px;
+}
+
+.form_radio_btn {
+    display: inline-block;
+    margin-right: 10px;
+}
+.form_radio_btn input[type=radio] {
+    display: none;
+}
+.form_radio_btn label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0px 15px;
+    line-height: 34px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    user-select: none;
+}
+
+/* Checked */
+.form_radio_btn input[type=radio]:checked + label {
+    background: rgb(136, 4, 4);
+}
+
+/* Hover */
+.form_radio_btn label:hover {
+    color: #666;
+}
+
+.btn-exit a {
+    color: black;
+}
+
+.result {
+    margin-top: 9px;
+    margin-left: 50%;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+}
+
+footer {
+    height: 300px;
+    background-color: black;
+}
+
+.footer-center {
+    position: relative;
+    top: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.tg-icon {
+    height: 100px;
+}
+.vk-icon {
+    height: 130px;
+}
+
+.copyright {
+    position: relative;
+    color: white;
+}

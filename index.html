@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Документ</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div id="slide1" class="authorization">
+            <div class="container">
+                <form id="authForm" novalidate>
+                    <h1 class="autho">Авторизация</h1>
+                    <br><br><br>
+                    
+                    <label for="login">Логин:</label>
+                    <input type="text" id="login" placeholder="Руслан" required 
+                           pattern="^[а-яА-ЯёЁ0-9]{4,10}$" 
+                           title="Логин должен состоять из символов русского алфавита и цифр, иметь количество символов от 4 до 10."><br>
+                    <span class="errors" id="login-error"></span>
+                    <br>
+            
+                    <label for="dob">Дата рождения:</label>
+                    <input type="date" id="dob" required 
+                           min="1950-01-01" 
+                           max="datetime-local" 
+                           title="Дата рождения должна быть не раньше 1950 года и не позже текущей даты."><br>
+                    <span class="errors" id="dob-error"></span>
+                    <br>
+                    
+                    <label>Пол:</label>
+                    <div class="gender-options">
+                        <div>
+                            <input type="radio" id="male" name="gender" value="Муж" required>
+                            <label for="М">Мужской</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="female" name="gender" value="Жен" required>
+                            <label for="Ж">Женский</label>
+                        </div>
+                    </div>
+                    <span class="errors" id="gender-error"></span> 
+                    <br><br>
+                    
+                    <button type="submit" class="button-next">Подтвердить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

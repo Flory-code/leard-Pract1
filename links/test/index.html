@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Apex Legends Test</title>
+</head>
+<body>
+    <header>
+        <div class="header-all">
+            <a href="index.html" class="logo">Apex Legends</a>
+            <div class="head-links">
+                <a href="../description/description.html">Описание</a>
+                <a href="">Тест</a>
+                <a href="../dictionary/index.html">Словарь</a>
+                <a href="../galery/index.html">Галерея</a>
+                <a href="../lk/index.html">Личный Кабинет</a>
+
+            </div>
+            <div class="authlogo">
+                <a href="../../index.html">Выйти</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="container">
+            <div id="quiz" class="slide">
+                <h1 class="titt">Apex Legends Quiz</h1>
+                <form id="quizForm" novalidate>
+                    <h2>Вопрос 1:</h2>
+                    <p>Какой персонаж использует способности, связанные с телепортацией?</p>
+                    <input type="text" id="q1" placeholder="Ответ..." required>
+                    <div class="error-message" id="error-q1"></div>
+                    
+                    <h2>Вопрос 2:</h2>
+                    <p>Какой предмет позволяет вам восстанавливать здоровье?</p>
+                    <input type="text" id="q2" placeholder="Ответ..." required>
+                    <div class="error-message" id="error-q2"></div>
+                    
+                    <h2>Вопрос 3:</h2>
+                    <p>Какой класс персонажей имеет способности поддержки?</p>
+                    <div class="form_radio_btn">
+                        <input id="radio-1" type="radio" name="q3" value="support">
+                        <label for="radio-1">Support</label>
+                        <input id="radio-2" type="radio" name="q3" value="offense">
+                        <label for="radio-2">Offense</label>
+                        <input id="radio-3" type="radio" name="q3" value="defense">
+                        <label for="radio-3">Defense</label>
+                    </div>
+                    <div class="error-message" id="error-q3"></div>
+                    
+                    <h2>Вопрос 4:</h2>
+                    <p>Какой предмет позволяет вам видеть врагов через стены?</p>
+                    <div class="form_radio_btn">
+                        <input id="radio-4" type="radio" name="q4" value="ping">
+                        <label for="radio-4">Ping</label>
+                        <input id="radio-5" type="radio" name="q4" value="scan">
+                        <label for="radio-5">Scan</label>
+                        <input id="radio-6" type="radio" name="q4" value="reveal">
+                        <label for="radio-6">Reveal</label>
+                    </div>
+                    <div class="error-message" id="error-q4"></div>
+                    
+                    <h2>Вопрос 5:</h2>
+                    <p>Какой персонаж является мастером стрельбы из снайперской винтовки?</p>
+                    <input type="text" id="q5" placeholder="Ответ..." required>
+                    <div class="error-message" id="error-q5"></div>
+                    
+                    <div class="con2">
+                        <button type="submit">Проверить</button>
+                        <button type="button" id="retry">Повторить</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="resultContent" class="result">
+                <h2>Результаты:</h2>
+                <p>Вы ответили на 0 из 5 вопросов верно.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-center">
+            <a href="tel:+79998887766" class="phone"><h1>+7(999)888 77-66</h1></a>
+            <div class="icons">
+                <a href=""><img src="../../img/telegram.svg" alt="" class="tg-icon"></a>
+                <a href=""><img src="../../img/vk.svg" alt="" class="vk-icon"></a>
+            </div>
+            <h1 class="copyright">© r5Academy 2024</h1>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
