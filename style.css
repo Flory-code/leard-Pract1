@@ -62,7 +62,7 @@
     box-sizing: border-box;
 }
 
-.errors {
+.error {
     color: rgb(255, 0, 0);
     font-size: 0.9rem;
     margin-top: 5px;

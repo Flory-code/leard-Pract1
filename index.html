@@ -4,44 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Документ</title>
+    <title>Авторизация</title>
 </head>
 <body>
     <div class="content">
         <div id="slide1" class="authorization">
             <div class="container">
-                <form id="authForm" novalidate>
+                <form name="auth" id="authForm" novalidate>
                     <h1 class="autho">Авторизация</h1>
                     <br><br><br>
                     
                     <label for="login">Логин:</label>
-                    <input type="text" id="login" placeholder="Руслан" required 
+                    <input type="text" name="login" id="login" placeholder="Введите логин" required 
                            pattern="^[а-яА-ЯёЁ0-9]{4,10}$" 
                            title="Логин должен состоять из символов русского алфавита и цифр, иметь количество символов от 4 до 10."><br>
-                    <span class="errors" id="login-error"></span>
-                    <br>
-            
+                    <br><span class="error" id="login-error"></span> <!-- Элемент для вывода ошибки -->
+                    
                     <label for="dob">Дата рождения:</label>
-                    <input type="date" id="dob" required 
+                    <input type="date" name="dob" id="dob" required 
                            min="1950-01-01" 
-                           max="" 
+                           max="today" 
                            title="Дата рождения должна быть не раньше 1950 года и не позже текущей даты."><br>
-                    <span class="errors" id="dob-error"></span>
-                    <br>
+                    <br><span class="error" id="dob-error"></span> <!-- Элемент для вывода ошибки -->
                     
                     <label>Пол:</label>
                     <div class="gender-options">
                         <div>
-                            <input type="radio" id="male" name="gender" value="Муж" required>
+                            <input type="radio" name="gender" value="Мужской" required>
                             <label for="male">Мужской</label>
                         </div>
                         <div>
-                            <input type="radio" id="female" name="gender" value="Жен" required>
+                            <input type="radio" name="gender" value="Женский" required>
                             <label for="female">Женский</label>
                         </div>
+                        <div>
+                            <input type="radio" name="gender" value="Другое" required>
+                            <label for="other">Другое</label>
+                        </div>
                     </div>
-                    <span class="errors" id="gender-error"></span> 
-                    <br><br>
+                    <span class="error" id="gender-error"></span> <!-- Элемент для вывода ошибки -->
                     
                     <button type="submit" class="button-next">Подтвердить</button>
                 </form>

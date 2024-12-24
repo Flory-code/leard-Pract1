@@ -1,54 +1,50 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const authForm = document.getElementById('authForm');
+    const form1 = document.forms.auth;
 
-    if (authForm) {
-        authForm.addEventListener('submit', function(event) {
-            document.getElementById('login-error').textContent = '';
-            document.getElementById('dob-error').textContent = '';
-            document.getElementById('gender-error').textContent = '';
+    form1.addEventListener('submit', (event) => {
+        event.preventDefault(); // Отменяем стандартное поведение формы
 
-            let login = document.getElementById('login').value;
-            let dob = document.getElementById('dob').value;
-            let gender = document.querySelector('input[name="gender"]:checked');
+        // Сбрасываем предыдущие сообщения об ошибках
+        document.getElementById('login-error').textContent = '';
+        document.getElementById('dob-error').textContent = '';
+        document.getElementById('gender-error').textContent = '';
 
-            let errors = [];
+        // Проверяем валидность полей
+        const login = form1.login;
+        const dob = form1.dob;
+        const gender = form1.gender;
 
-            // Валидация логина
-            if (!login.match(/^[а-яА-ЯёЁ0-9]{4,10}$/)) {
-                errors.push('Логин должен состоять из символов русского алфавита и цифр, иметь количество символов от 4 до 10.');
-                document.getElementById('login-error').textContent = errors[errors.length - 1];
-            }
+        let hasError = false; // Флаг для отслеживания наличия ошибок
 
-            // Валидация даты рождения
-            if (!dob) {
-                errors.push('Дата рождения не может быть пустой.');
-                document.getElementById('dob-error').textContent = errors[errors.length - 1];
-            } else {
-                let birthDate = new Date(dob);
-                let today = new Date();
-                if (birthDate > today) {
-                    errors.push('Дата рождения должна быть не позже текущей даты.');
-                    document.getElementById('dob-error').textContent = errors[errors.length - 1]; 
-                }
-            }
+        if (!login.validity.valid) {
+            document.getElementById('login-error').textContent = 'Ошибка: Логин не соответствует требованиям.';
+            hasError = true;
+        }
 
-            // Валидация пола
-            if (!gender) {
-                errors.push('Выберите пол.');
-                document.getElementById('gender-error').textContent = errors[errors.length - 1]; 
-            }
+        if (!dob.validity.valid) {
+            document.getElementById('dob-error').textContent = 'Ошибка: Дата рождения не соответствует требованиям.';
+            hasError = true;
+        }
 
-            // Если есть ошибки, предотвращаем отправку формы
-            if (errors.length > 0) {
-                event.preventDefault();
-            } else {
-                localStorage.setItem('userLogin', login);
-                localStorage.setItem('userDob', dob);
-                localStorage.setItem('userGender', gender.value);
-                
-                event.preventDefault(); 
-                window.location.href = 'links/description/description.html'; 
-            }
-        });
-    }
+        if (!gender.value) {
+            document.getElementById('gender-error').textContent = 'Ошибка: Выберите пол.';
+            hasError = true;
+        }
+
+        if (!hasError) {
+            // Если все поля валидны, сохраняем данные в localStorage
+            localStorage.setItem('userLogin', login.value);
+            localStorage.setItem('userDob', dob.value);
+            localStorage.setItem('userGender', gender.value);
+
+            console.log('Данные сохранены:', {
+                login: login.value,
+                dob: dob.value,
+                gender: gender.value
+            });
+
+            // Перенаправление на другую страницу
+            window.location.href = 'links/description/description.html';
+        }
+    });
 });
