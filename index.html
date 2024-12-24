@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Документ</title>
-    <style>
-
-    </style>
 </head>
 <body>
     <div class="content">
@@ -27,7 +24,7 @@
                     <label for="dob">Дата рождения:</label>
                     <input type="date" id="dob" required 
                            min="1950-01-01" 
-                           max="datetime-local" 
+                           max="" 
                            title="Дата рождения должна быть не раньше 1950 года и не позже текущей даты."><br>
                     <span class="errors" id="dob-error"></span>
                     <br>
@@ -36,11 +33,11 @@
                     <div class="gender-options">
                         <div>
                             <input type="radio" id="male" name="gender" value="Муж" required>
-                            <label for="М">Мужской</label>
+                            <label for="male">Мужской</label>
                         </div>
                         <div>
                             <input type="radio" id="female" name="gender" value="Жен" required>
-                            <label for="Ж">Женский</label>
+                            <label for="female">Женский</label>
                         </div>
                     </div>
                     <span class="errors" id="gender-error"></span> 
